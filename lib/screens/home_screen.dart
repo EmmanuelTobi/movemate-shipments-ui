@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:movemateshipmentsui/screens/calculate/calculate_screen.dart';
 import 'package:movemateshipmentsui/screens/shared/home_header.dart';
 import 'package:provider/provider.dart';
 import '../utils/constants.dart';
@@ -65,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             children: [
               _buildHomeContent(viewModel),
-              Container(color: Colors.white, child: const Center(child: Text('Calculate'))),
+              const CalculateScreen(),
               const ShipmentHistoryScreen(),
               Container(color: Colors.white, child: const Center(child: Text('Profile'))),
             ],
