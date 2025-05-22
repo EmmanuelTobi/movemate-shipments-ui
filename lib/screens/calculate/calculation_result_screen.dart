@@ -18,8 +18,8 @@ class CalculationResultScreen extends StatelessWidget {
             child: Center(
               child: AnimatedListView(
               scrollDirection: Axis.vertical,
-              staggerDuration: const Duration(milliseconds: 200),
-              animationDuration: const Duration(milliseconds: 400),
+              staggerDuration: const Duration(milliseconds: 40),
+              animationDuration: const Duration(milliseconds: 300),
               itemBuilder: (context, child, animation) {
                 return FadeTransition(
                   opacity: animation,
