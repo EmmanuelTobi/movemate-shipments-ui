@@ -6,6 +6,7 @@ class Shipment {
   final String receiver;
   final String receiverLocation;
   final String status;
+  final int? amount;
   final String estimatedDelivery;
 
   Shipment({
@@ -15,6 +16,7 @@ class Shipment {
     required this.senderLocation,
     required this.receiver,
     required this.receiverLocation,
+    this.amount,
     required this.status,
     required this.estimatedDelivery,
   });
