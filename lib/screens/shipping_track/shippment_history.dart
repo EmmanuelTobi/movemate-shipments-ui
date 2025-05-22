@@ -73,7 +73,7 @@ class _ShipmentHistoryScreenState extends State<ShipmentHistoryScreen> with Sing
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -94,7 +94,7 @@ class _ShipmentHistoryScreenState extends State<ShipmentHistoryScreen> with Sing
           style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w600,
-            fontSize: 16
+              fontSize: 16
           ),
         ),
         bottom: TabBar(
@@ -104,6 +104,7 @@ class _ShipmentHistoryScreenState extends State<ShipmentHistoryScreen> with Sing
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white70,
           tabs: [
+            Tab(text: 'All (${_shipments.length})'),
             Tab(text: 'In progress (${_shipments.where((s) => s.status == 'in-progress').length})'),
             Tab(text: 'Pending order (${_shipments.where((s) => s.status == 'pending').length})'),
             Tab(text: 'Cancelled (${_shipments.where((s) => s.status == 'cancelled').length})'),
@@ -113,6 +114,7 @@ class _ShipmentHistoryScreenState extends State<ShipmentHistoryScreen> with Sing
       body: TabBarView(
         controller: _tabController,
         children: [
+          _buildShipmentList(_shipments),
           _buildShipmentList(_shipments.where((s) => s.status == 'in-progress').toList()),
           _buildShipmentList(_shipments.where((s) => s.status == 'pending').toList()),
           _buildShipmentList(_shipments.where((s) => s.status == 'cancelled').toList()),
@@ -132,7 +134,13 @@ class _ShipmentHistoryScreenState extends State<ShipmentHistoryScreen> with Sing
         itemBuilder: (context, child, animation) {
           return FadeTransition(
             opacity: animation,
-            child: child,
+            child: SlideTransition(
+              position: animation.drive(Tween(
+                begin: const Offset(0.0, 1.0),
+                end: const Offset(0.0, 0.0),
+              ).chain(CurveTween(curve: Curves.easeOutCubic))),
+              child: child,
+            ),
           );
         },
         children: shipments.map((shipment) {
