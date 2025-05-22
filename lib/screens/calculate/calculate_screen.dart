@@ -134,7 +134,7 @@ class _CategoryItemsState extends State<CategoryItems> {
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: widget.category == model.selectedCategory ? Colors.black : Colors.grey.withOpacity(0.4),
-                      width: widget.category == model.selectedCategory ? 2 : 0.9,
+                      width: widget.category == model.selectedCategory ? 2 : 1.5,
                     ),
                     borderRadius: BorderRadius.circular(10),
                     color: widget.category == model.selectedCategory ? Colors.black : Colors.white,

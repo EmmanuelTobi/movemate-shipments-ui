@@ -37,9 +37,7 @@ class VehicleCard extends StatelessWidget {
                     vehicle.name,
                     style: AppTextStyles.subtitle1.copyWith(
                       fontWeight: FontWeight.w600,
-                      color: vehicle.isSelected
-                          ? AppColors.primary
-                          : AppColors.textPrimary,
+                      color: AppColors.textDark.withOpacity(0.8),
                     ),
                   ),
                   const SizedBox(height: AppSizes.paddingXS),

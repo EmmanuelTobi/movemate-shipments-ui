@@ -98,6 +98,7 @@ class ShipmentTrackingCard extends StatelessWidget {
                                   '${shipment.sender}, ${shipment.senderLocation}',
                                   style: AppTextStyles.body2.copyWith(
                                     fontWeight: FontWeight.w600,
+                                    color: AppColors.textDark.withOpacity(0.7)
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
@@ -133,6 +134,7 @@ class ShipmentTrackingCard extends StatelessWidget {
                                 shipment.estimatedDelivery,
                                 style: AppTextStyles.body2.copyWith(
                                   fontWeight: FontWeight.w600,
+                                    color: AppColors.textDark.withOpacity(0.7)
                                 ),
                               ),
                             ],
@@ -179,6 +181,7 @@ class ShipmentTrackingCard extends StatelessWidget {
                                   '${shipment.receiver}, ${shipment.receiverLocation}',
                                   style: AppTextStyles.body2.copyWith(
                                     fontWeight: FontWeight.w600,
+                                    color: AppColors.textDark.withOpacity(0.7)
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
@@ -202,6 +205,7 @@ class ShipmentTrackingCard extends StatelessWidget {
                             shipment.status,
                             style: AppTextStyles.body2.copyWith(
                               fontWeight: FontWeight.w600,
+                                color: AppColors.textDark.withOpacity(0.7)
                             ),
                           ),
                         ],

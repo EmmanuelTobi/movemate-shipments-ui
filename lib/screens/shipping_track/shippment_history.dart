@@ -102,7 +102,11 @@ class _ShipmentHistoryScreenState extends State<ShipmentHistoryScreen> with Sing
           indicatorColor: Colors.green,
           indicatorWeight: 5,
           labelColor: Colors.white,
+          physics: const BouncingScrollPhysics(),
           unselectedLabelColor: Colors.white70,
+          labelStyle: const TextStyle(
+            fontWeight: FontWeight.w600
+          ),
           tabs: [
             Tab(text: 'All (${_shipments.length})'),
             Tab(text: 'In progress (${_shipments.where((s) => s.status == 'in-progress').length})'),
