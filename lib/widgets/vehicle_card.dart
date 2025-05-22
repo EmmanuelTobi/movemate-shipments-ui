@@ -24,18 +24,6 @@ class VehicleCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(AppSizes.borderRadiusL),
-          border: vehicle.isSelected
-              ? Border.all(color: AppColors.primary, width: 2)
-              : null,
-          boxShadow: vehicle.isSelected
-              ? [
-                  BoxShadow(
-                    color: AppColors.primary.withOpacity(0.3),
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  )
-                ]
-              : null,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

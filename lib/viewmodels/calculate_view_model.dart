@@ -166,43 +166,40 @@ class CalculateViewModel extends BaseViewModel {
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 32),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: TweenAnimationBuilder<double>(
-              tween: Tween(begin: 1.0, end: 1.0),
-              duration: const Duration(milliseconds: 200),
-              builder: (context, scale, child) {
-                return Transform.scale(
-                  scale: scale,
-                  child: GestureDetector(
-                    onTap: () {
-                      onNavigateToNext?.call();
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: 56,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          'Calculate',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
+          const SizedBox(height: 42),
+          TweenAnimationBuilder<double>(
+            tween: Tween(begin: 1.0, end: 1.0),
+            duration: const Duration(milliseconds: 200),
+            builder: (context, scale, child) {
+              return Transform.scale(
+                scale: scale,
+                child: GestureDetector(
+                  onTap: () {
+                    onNavigateToNext?.call();
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 56,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFF8C00),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Calculate',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                   ),
-                );
-              },
-            ),
+                ),
+              );
+            },
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 4),
         ],
       ),
 

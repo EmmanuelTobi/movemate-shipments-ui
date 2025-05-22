@@ -22,9 +22,6 @@ class _CalculateScreenState extends State<CalculateScreen> {
     return ViewModelBuilder<CalculateViewModel>.reactive(
         viewModelBuilder: () => CalculateViewModel(),
         disposeViewModel: false,
-        onViewModelReady:(model) async {
-
-        },
         builder: (context, model, child) {
         return Scaffold(
           appBar: AppBar(

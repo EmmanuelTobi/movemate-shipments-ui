@@ -24,7 +24,7 @@ class CalculationResultScreen extends StatelessWidget {
           Text(
             '\$${amount.toStringAsFixed(2)} USD',
             style: const TextStyle(
-              fontSize: 32,
+              fontSize: 22,
               fontWeight: FontWeight.bold,
               color: Color(0xFF00C853),
             ),
