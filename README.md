@@ -11,7 +11,6 @@ A Shipment UI and animation implementation detailing.
 - 📱 Responsive design for all screen sizes
 - ✨ Smooth animations and transitions
 
-```
 
 ## Project Structure
 
