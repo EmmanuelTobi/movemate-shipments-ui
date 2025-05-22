@@ -1,16 +1,26 @@
-# movemateshipmentsui
+# MoveMate Shipments UI
 
-movemate shipments ui impl
+A Shipment UI and animation implementation detailing.
 
-## Getting Started
+## Activities
 
-This project is a starting point for a Flutter application.
+- 📦 Calculate UI implementation
+- 🚚 Shipments history UI implementation
+- 🌊 Home UI dashboard implementation
+- 🔍 Search functionality for shipments
+- 📱 Responsive design for all screen sizes
+- ✨ Smooth animations and transitions
 
-A few resources to get you started if this is your first Flutter project:
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Project Structure
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+lib/
+├── main.dart
+├── models/         # Data models
+├── screens/        # UI screens
+├── utils/          # Utility functions
+├── viewmodels/     # UI logic setups
+└── widgets/        # Reusable widgets
+```
