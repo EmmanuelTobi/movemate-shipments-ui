@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movemateshipmentsui/utils/constants.dart';
 import 'package:movemateshipmentsui/viewmodels/calculate_view_model.dart';
 import 'package:movemateshipmentsui/widgets/animated_list_view.dart';
 import 'package:stacked/stacked.dart';
@@ -152,8 +153,8 @@ class _CategoryItemsState extends State<CategoryItems> {
                           widget.category,
                           style: TextStyle(
                             fontSize: 12,
-                            color: widget.category == model.selectedCategory ? Colors.white : Colors.black,
-                            fontWeight: widget.category == model.selectedCategory ? FontWeight.bold :  FontWeight.normal,
+                            color: widget.category == model.selectedCategory ? Colors.white : AppColors.textSecondary,
+                            fontWeight: widget.category == model.selectedCategory ? FontWeight.bold :  FontWeight.w600,
                           ),
                         ),
                       ],

@@ -203,7 +203,9 @@ class _ShipmentHistoryScreenState extends State<ShipmentHistoryScreen> with Sing
                           Text(' • ', style: AppTextStyles.caption.copyWith(color: Colors.grey),),
                           Text(
                             'Sep 20, 2023',
-                            style: AppTextStyles.body2.copyWith(color: Colors.grey),
+                            style: AppTextStyles.body2.copyWith(
+                                color: AppColors.textDark.withOpacity(0.8)
+                            ),
                           ),
                         ],
                       ),
