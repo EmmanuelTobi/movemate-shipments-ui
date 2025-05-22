@@ -54,10 +54,19 @@ class ShippingTrackSearchView extends StatelessWidget {
                   color: Colors.white,
                 ),
                 child: AnimatedListView(
+                  scrollDirection: Axis.vertical,
+                  staggerDuration: const Duration(milliseconds: 200),
+                  animationDuration: const Duration(milliseconds: 500),
                   itemBuilder: (context, child, animation) {
                     return FadeTransition(
                       opacity: animation,
-                      child: child,
+                      child: SlideTransition(
+                        position: animation.drive(Tween(
+                          begin: const Offset(0.0, 1.0),
+                          end: const Offset(0.0, 0.0),
+                        ).chain(CurveTween(curve: Curves.easeOutCubic))),
+                        child: child,
+                      ),
                     );
                   },
                   children: viewModel.filteredShipments
